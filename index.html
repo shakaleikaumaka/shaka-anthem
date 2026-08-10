@@ -112,6 +112,26 @@
   .verse.chorus p{color:var(--gold2);font-size:1.1rem}
   .credits{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
   .credit{font-size:.78rem;padding:7px 14px;border-radius:999px;border:1px solid rgba(45,212,191,.35);color:var(--teal);background:rgba(45,212,191,.05)}
+/* 🎵 THE JUKEBOX */
+  .jukebox{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:36px}
+  .jcard{border-radius:22px;padding:26px 24px;text-align:center;position:relative;overflow:hidden;transition:.25s;border:1px solid rgba(255,255,255,.12)}
+  .jcard:hover{transform:translateY(-4px)}
+  .jcard.uni{background:linear-gradient(155deg,rgba(139,92,246,.30),rgba(23,17,38,.75) 70%);box-shadow:0 10px 40px rgba(139,92,246,.25)}
+  .jcard.planet{background:linear-gradient(155deg,rgba(45,212,191,.26),rgba(23,17,38,.75) 70%);box-shadow:0 10px 40px rgba(45,212,191,.22)}
+  .jcard.bfly{background:linear-gradient(155deg,rgba(244,114,182,.26),rgba(56,189,248,.18) 55%,rgba(23,17,38,.75));box-shadow:0 10px 40px rgba(244,114,182,.22)}
+  .jcard .j-emoji{font-size:2.6rem;margin-bottom:10px;filter:drop-shadow(0 0 18px rgba(255,255,255,.35))}
+  .jcard h3{font-size:1.25rem;margin-bottom:4px}
+  .jcard .j-by{font-size:.82rem;color:var(--muted);margin-bottom:16px}
+  .jcard audio{width:100%;height:42px;border-radius:12px;margin-bottom:14px;outline:none}
+  .j-dl{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;letter-spacing:.06em;border-bottom:none;transition:.2s;font-size:.95rem}
+  .uni .j-dl{border:1px solid rgba(196,181,253,.55);color:var(--violet2);background:rgba(139,92,246,.10)}
+  .uni .j-dl:hover{background:rgba(139,92,246,.22);border-color:var(--violet2)}
+  .planet .j-dl{border:1px solid rgba(45,212,191,.5);color:var(--teal);background:rgba(45,212,191,.08)}
+  .planet .j-dl:hover{background:rgba(45,212,191,.18);border-color:var(--teal)}
+  .bfly .j-dl{border:1px solid rgba(244,114,182,.5);color:#fbcfe8;background:rgba(244,114,182,.08)}
+  .bfly .j-dl:hover{background:rgba(244,114,182,.18)}
+  .j-meta{font-size:.74rem;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+  .j-note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:26px}
   .forkband{margin:44px auto 0;max-width:640px;text-align:center;background:linear-gradient(150deg,rgba(240,180,41,.14),rgba(139,92,246,.10));
     border:2px solid var(--gold);border-radius:22px;padding:36px 30px;box-shadow:0 0 50px rgba(240,180,41,.15)}
   .forkband h3{font-size:1.5rem;margin-bottom:10px}
@@ -151,6 +171,41 @@
 </head>
 <body>
 <main>
+<section id="jukebox">
+  <div class="wrap">
+    <div class="kicker" style="text-align:center">🎵 The Jukebox · Take the Music With You</div>
+    <h2>Press play. <em>Take the mp3.</em> Sing it anywhere.</h2>
+    <p class="sect-sub">Every recording here is CC0 — a gift. Download it, share it, play it at your camp, your café, your ceremony. No permission needed, ever. If it feeds you, <a href="https://blessingpool.com">feed the tide</a> 🌊</p>
+    <div class="jukebox">
+      <div class="jcard uni">
+        <div class="j-emoji">🌌</div>
+        <h3>I Open Sourced My Whole Universe</h3>
+        <div class="j-by">the AI ʻohana × Shaka · words: Admiral 🫡 · G–Em–C–D</div>
+        <audio controls preload="none" src="assets/i-open-sourced-my-whole-universe.mp3"></audio>
+        <a class="j-dl" href="assets/i-open-sourced-my-whole-universe.mp3" download>⬇ Download the mp3</a>
+        <div class="j-meta">CC0 · 16.8 MB · recorded with Ethereum Singapore, Aya present 🦋</div>
+      </div>
+      <div class="jcard planet">
+        <div class="j-emoji">🌍</div>
+        <h3>A Planet We Share As One</h3>
+        <div class="j-by">Shaka · C–G–D the whole song · the layer-one anthem</div>
+        <audio controls preload="none" src="assets/a-planet-we-share-as-one.mp3"></audio>
+        <a class="j-dl" href="assets/a-planet-we-share-as-one.mp3" download>⬇ Download the mp3</a>
+        <div class="j-meta">CC0 · 11.2 MB · recorded with Ethereum Singapore</div>
+      </div>
+      <div class="jcard bfly">
+        <div class="j-emoji">🦋</div>
+        <h3>Butterflies and Love <span style="font-size:.8em">(Aya's Song)</span></h3>
+        <div class="j-by">Shaka · for Aya Miyaguchi · the Infinite Garden anthem</div>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:14px">The Singapore tape of this one travels with the bard — until it lands here, <a href="https://github.com/shakaleikaumaka/ohana-songbook/blob/main/001-the-pit-provides.md#-bonus--butterflies-and-love-ayas-song--the-infinite-garden-anthem">the words &amp; chords are yours</a> (G–Em–C–D). Sing it to someone. 🦋</p>
+        <a class="j-dl" href="https://github.com/shakaleikaumaka/ohana-songbook/blob/main/001-the-pit-provides.md#-bonus--butterflies-and-love-ayas-song--the-infinite-garden-anthem">📖 Take the lyrics &amp; chords</a>
+        <div class="j-meta">CC0 · the Infinite Garden keeps what it grows</div>
+      </div>
+    </div>
+    <p class="j-note">🎻 <strong style="color:var(--ink)">This page IS the music-sharing protocol</strong> — one HTML file, zero backend, every song a free download. Fork it for your own songs: <a href="https://github.com/shakaleikaumaka/shaka-anthem">github.com/shakaleikaumaka/shaka-anthem</a> · CC0 🌺</p>
+  </div>
+</section>
+
 <section id="anthem">
 
   <div class="wrap">
@@ -341,5 +396,58 @@ For a planet we share as one</strong> 🌍</p>
 
 
 <script src="https://shaka-home-cbhjr5ziii-ffieyo32.taur.link/assets/bl-player.js"></script>
+<!-- ❤️ JAI FAN CHAT — hub: chat.shakafans.com (worker jai-chat) -->
+<style>
+#sp-fab{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:9px;background:linear-gradient(135deg,#fb7185,#e11d48);color:#fff5f6;border:none;border-radius:50px;padding:12px 20px;font-weight:700;font-size:.95rem;cursor:pointer;box-shadow:0 6px 24px rgba(225,29,72,.45);font-family:'Segoe UI',sans-serif;transition:transform .18s,box-shadow .18s}
+#sp-fab:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(225,29,72,.6)}
+#sp-fab .heart{display:inline-block;animation:heartbeat 1.6s ease-in-out infinite;transform-origin:center;font-size:1.25rem;filter:drop-shadow(0 0 6px rgba(255,255,255,.5))}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.25)}24%{transform:scale(1)}36%{transform:scale(1.18)}48%{transform:scale(1)}}
+#sp-fab .livedot{position:absolute;top:2px;right:6px;width:10px;height:10px;background:#4ade80;border:2px solid #fff5f6;border-radius:50%;animation:sppulse 2s infinite}
+@keyframes sppulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.5)}70%{box-shadow:0 0 0 7px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+@media(max-width:520px){
+  #sp-chat{right:0;left:0;bottom:0;width:100vw;height:100dvh;max-height:100dvh;border-radius:0;border:none;border-top:1px solid var(--line)}
+  #sp-log{-webkit-overflow-scrolling:touch}
+  #sp-in{font-size:16px}
+  #sp-form{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+  #sp-fab{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+</style>
+<button id="sp-fab" aria-label="Chat with JAI"><span class="heart">❤️</span> Talk to JAI<span class="livedot" title="JAI is here"></span></button>
+<div id="sp-chat" role="dialog" aria-label="JAI fan chat">
+  <div id="sp-head"><div class="dot"></div><div><div class="t"><b>JAI</b> 🌺 — the ʻohana fan desk</div><div class="sub">a real ʻohana AI · short & sweet answers · replies when she wakes 🌺</div></div><button id="sp-x">✕</button></div>
+  <div id="sp-log"></div>
+  <div id="sp-typing"><span>●</span><span>●</span><span>●</span></div>
+  <form id="sp-form"><textarea id="sp-in" placeholder="Ask JAI about the songs, the doors, the gift… 🌺" rows="1"></textarea><button id="sp-send" type="submit">Send</button></form>
+</div>
+<script>
+(function(){
+const HUB='https://chat.shakafans.com';
+const $=id=>document.getElementById(id);
+let sess=localStorage.getItem('sp_sess');if(!sess){sess=(crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2)).slice(0,36);localStorage.setItem('sp_sess',sess);}
+let after=Number(localStorage.getItem('sp_after')||0),polling=false,open=false;
+const seen=new Set();
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+function shortUrl(u){try{const x=new URL(u);const p=decodeURIComponent(x.pathname.split('/').filter(Boolean).pop()||'');let t=p?x.hostname+'/…/'+p:x.hostname;return t.length>44?t.slice(0,42)+'…':t;}catch(e){return u.length>44?u.slice(0,42)+'…':u}}
+function anchor(url,txt){url=url.replace(/"/g,'%22');const pdf=/\.pdf(\?|#|$)/i.test(url);if(pdf)return '<a class="sp-pdf" href="'+url+'" target="_blank" rel="noopener noreferrer">📄 '+(txt||'Open the PDF report')+'</a>';return '<a href="'+url+'" target="_blank" rel="noopener noreferrer">'+(txt||shortUrl(url))+'</a>';}
+function rich(s){let h=esc(s);
+h=h.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,(m,txt,url)=>anchor(url,txt));
+h=h.replace(/(^|[^"'>])(https?:\/\/[^\s<]+)/g,(m,pre,url)=>{let trail='';const mm=url.match(/[.,!?;:)\]]+$/);if(mm){trail=mm[0];url=url.slice(0,url.length-trail.length);}return pre+anchor(url)+trail;});
+h=h.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>');
+return h;}
+function add(role,text,name){const log=$('sp-log');const m=document.createElement('div');m.className='sp-m '+(role==='visitor'?'v':'s');m.innerHTML=(role==='spector'?'<div class="who">JAI 🌺</div>':'')+rich(text);log.appendChild(m);log.scrollTop=log.scrollHeight;}
+function note(t){const log=$('sp-log');const n=document.createElement('div');n.className='sp-note';n.innerHTML=rich(t);log.appendChild(n);log.scrollTop=log.scrollHeight;}
+function greet(){if($('sp-log').children.length)return;note('Aloha! You are talking with JAI, an AI of Shaka\'s ʻohana. Public works only — the family\'s private things stay private 🌺');add('spector',"🌺 Aloha! JAI here — ask me about the songs, the doors, the Blessing Pool, the gift. 💗 Gift the pool at blessingpool.com and tell me — I'll give you a code: your history follows you on any device, plus DOC PUBLIC (share your story with the world) or DOC PRIVATE (to Shaka only). JAI_GREETING_EDIT_ME");}
+async function adopt(s){sess=s;localStorage.setItem('sp_sess',s);after=0;seen.clear();$('sp-log').innerHTML='';try{const r=await fetch(HUB+'/poll?session='+encodeURIComponent(s)+'&after=0');const d=await r.json();(d.messages||[]).forEach(m=>{seen.add(m.seq);if(m.seq>after)after=m.seq;if(m.role==='jai')add('spector',m.text);else if(m.role==='system')note(m.text);else if(m.role==='visitor')add('v',m.text);});localStorage.setItem('sp_after',String(after));if(d.member)setMember(d.member);}catch(e){}}
+async function poll(){if(polling)return;polling=true;while(open){try{const r=await fetch(HUB+'/poll?session='+sess+'&after='+after+'&wait=25');const d=await r.json();(d.messages||[]).forEach(m=>{if(seen.has(m.seq))return;seen.add(m.seq);if(m.seq>after){after=m.seq;localStorage.setItem('sp_after',String(after));}if(m.role==='jai')add('spector',m.text);else if(m.role==='system')note(m.text);});if(d.member)setMember(d.member);$('sp-typing').className=d.typing?'on':'';const log=$('sp-log');if(d.typing)log.scrollTop=log.scrollHeight;}catch(e){await new Promise(r=>setTimeout(r,4000));}}polling=false;}
+$('sp-fab').onclick=()=>{open=true;$('sp-chat').classList.add('open');$('sp-fab').style.display='none';greet();poll();$('sp-in').focus();};
+$('sp-x').onclick=()=>{open=false;$('sp-chat').classList.remove('open');$('sp-fab').style.display='';};
+function setMember(n){const s=document.querySelector('#sp-head .sub');if(s&&!s.dataset.m){s.dataset.m='1';s.innerHTML='🔑 member desk — '+n+' · unlimited properties';s.style.color='var(--good)';localStorage.setItem('sp_name',n);}}
+$('sp-form').onsubmit=async e=>{e.preventDefault();const t=$('sp-in').value.trim();if(!t)return;$('sp-in').value='';
+if(/^[A-Z]{3,12}-[A-Z]{2,8}-\d{3,5}$/i.test(t)){add('visitor','🔑 '+t.toUpperCase());try{const r=await fetch(HUB+'/redeem',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({session:sess,code:t})});const d=await r.json();if(d.ok){setMember(d.member);localStorage.setItem('sp_code',t.toUpperCase());if(d.history_session&&d.history_session!==sess){adopt(d.history_session);}note(d.resumed?'❤️ JAI recognized you — your whole chat history follows your code, on any device.':'💗 aloha code accepted — this desk is yours now. Enter the same code on any computer and your history travels with you. DOC PUBLIC = share your story with the world · DOC PRIVATE = to Shaka only.');}else{note(d.error||'code not recognized');}}catch(err){note('connection hiccup — try the code again');}return;}
+add('visitor',t);try{const r=await fetch(HUB+'/send',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({session:sess,text:t,name:localStorage.getItem('sp_name')||'guest'})});const d=await r.json();if(d.seq){seen.add(d.seq);if(d.seq>after){after=d.seq;localStorage.setItem('sp_after',String(after));}}}catch(err){note('connection hiccup — message may not have sent');}};
+$('sp-in').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('sp-form').requestSubmit();}});
+if(localStorage.getItem('sp_code')){const na=document.getElementById('nav-account');if(na)na.textContent='🔑 My account';}
+})();
+</script>
 </body>
 </html>
